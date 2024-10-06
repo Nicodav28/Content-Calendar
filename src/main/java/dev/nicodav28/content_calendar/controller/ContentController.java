@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
 import dev.nicodav28.content_calendar.repository.ContentCollectionRepository;
+import dev.nicodav28.content_calendar.repository.ContentJdbcTemplateRepository;
 import jakarta.validation.Valid;
 
 import java.util.List;
@@ -27,6 +28,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 public class ContentController {
 
     private final ContentCollectionRepository contentRepository;
+    // private final ContentJdbcTemplateRepository repository;
 
     public ContentController(ContentCollectionRepository contentRepository) {
         this.contentRepository = contentRepository;
