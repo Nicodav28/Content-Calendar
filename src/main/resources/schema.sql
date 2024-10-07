@@ -9,4 +9,4 @@ CREATE TABLE IF NOT EXISTS Content (
     url VARCHAR(255)
 );
 
-INSERT INTO Content (title, description, status, content_type, date_created, date_updated) VALUES ('My Spring Data Blog Post', 'My Spring Data Blog Post', 'IDEA', 'ARTICLE', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+-- INSERT INTO Content (title, description, status, content_type, date_created, date_updated) VALUES ('My Spring Data Blog Post', 'My Spring Data Blog Post', 'IDEA', 'ARTICLE', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);

@@ -19,14 +19,6 @@ public class ContentCollectionRepository {
     public ContentCollectionRepository() {
     }
 
-    @PostConstruct
-    private void init() {
-        Content content = new Content(1, "My firtst blog post", "My first blog post", Status.IDEA, Type.ARTICLE,
-                LocalDateTime.now(), null, "");
-
-        contentList.add(content);
-    }
-
     public List<Content> findAll() {
         return contentList;
     }
@@ -38,6 +30,21 @@ public class ContentCollectionRepository {
     public void save(Content content) {
         contentList.removeIf(c -> c.id().equals(content.id()));
         contentList.add(content);
+    }
+
+    @PostConstruct
+    private void init() {
+        Content content = new Content(1,
+                "My First Blog Post",
+                "My first blog post",
+                Status.IDEA,
+                Type.ARTICLE,
+                LocalDateTime.now(),
+                null,
+                "");
+
+        contentList.add(content);
+
     }
 
     public boolean existsById(Integer id) {
